@@ -6,7 +6,6 @@ A modern Node.js starter template with TypeScript support.
 
 - 🚀 TypeScript 5
 - 📦 ESM support
-- 🔍 Path aliases (@/\*)
 - ✨ ESLint 9 + Prettier
 - 🐋 Docker support
 - 🪝 Git hooks with Husky
