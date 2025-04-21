@@ -12,6 +12,6 @@ switch (arg) {
     break;
   default:
     console.error('Available commands:');
-    console.error('  example  - Run the example function');
+    console.error('example  - Run the example function');
     process.exit(1);
 }

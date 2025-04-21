@@ -19,7 +19,8 @@
     "typecheck": "tsc --noEmit --skipLibCheck",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "example": "tsx src/run.ts example"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

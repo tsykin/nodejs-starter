@@ -1,7 +1,7 @@
 export function exampleFunction(): Promise<boolean> {
   try {
-    setTimeout(() => {}, 2000);
-    console.log('This is an example function.');
+    console.log('This is an example function that waits for 5 seconds.');
+    setTimeout(() => {}, 5000);
     return Promise.resolve(true);
   } catch (error) {
     if (error instanceof Error) {

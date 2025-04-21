@@ -24,7 +24,7 @@ A modern Node.js starter template with TypeScript support.
 - `npm run format` - Format code
 - `npm run format:check` - Check code formatting
 - `npm run typecheck` - Check types
-- `npm run example` - Run specific function (once instead of watching)
+- `npm run example` - Example of running a specific function instead of watching for changes
 
 ## Getting Started
 
