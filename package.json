@@ -1,0 +1,51 @@
+{
+  "name": "nodejs-starter",
+  "version": "1.0.0",
+  "description": "Starter template for Node.js project",
+  "type": "module",
+  "author": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "keywords": [
+    "nodejs",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "typecheck": "tsc --noEmit --skipLibCheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^22.7.5",
+    "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import-x": "^4.10.6",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "3.5.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.30.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tsc --noEmit --skipLibCheck"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
