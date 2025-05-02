@@ -56,16 +56,16 @@ export function formatDate(
       return `${Y}-${M}-${D}`;
   }
 }
+
 /**
- * Generates a random number with the specified number of digits.
+ * Generates a random integer between the specified minimum and maximum values, inclusive.
  *
- * @param length - The number of digits for the generated random number.
- * @returns A random number of the specified length.
+ * @param min - The minimum value (inclusive).
+ * @param max - The maximum value (inclusive).
+ * @returns A random integer between min and max.
  */
 
-export function generateRandomNumber(length: number): number {
-  const min = Math.pow(10, length - 1); // Smallest 5-digit number: 10000
-  const max = Math.pow(10, length) - 1; // Largest 5-digit number: 99999
+export function generateRandomNumber(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
