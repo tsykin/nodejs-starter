@@ -30,5 +30,5 @@ A modern Node.js starter template with TypeScript support.
 
 1. Clone this repository
 2. Install dependencies: `npm install`
-3. Create a `.env` file in the root directory (see Environment Variables section)
+3. Create a `.env` file in the root directory (see `.env.example` for available variables)
 4. Start development server: `npm run dev`
