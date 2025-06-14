@@ -11,7 +11,6 @@ const now = new Date();
 const formattedDate = formatDate(now, 'DD Month YYYY');
 const env = process.env.NODE_ENV;
 console.log(`Current timestamp: ${formattedDate}`);
-const randomN = generateRandomNumber(4);
+const randomN = generateRandomNumber(1, 100);
 console.log(`Random number: ${randomN}`);
-let test = 'test';
 console.log(`Environment: ${ENV.NODE_ENV}`);
