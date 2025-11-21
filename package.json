@@ -1,52 +1,46 @@
 {
   "name": "nodejs-starter",
   "version": "1.0.0",
-  "description": "Starter template for Node.js project",
-  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "node": "22.20.0",
+  "keywords": [],
   "author": "",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "keywords": [
-    "nodejs",
-    "typescript"
-  ],
+  "license": "ISC",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "tsx dist/index.js",
     "dev": "tsx watch src/index.ts",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
-    "typecheck": "tsc --noEmit --skipLibCheck",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "prepare": "husky",
-    "example": "tsx src/run.ts example"
+    "build": "vite build",
+    "start": "node .output/server/index.mjs",
+    "index": "tsx src/index.ts",
+    "prepare": "husky || true",
+    "typecheck": "tsc --noEmit && npx biome check src/ --error-on-warnings",
+    "lint": "biome lint src/",
+    "format": "biome format src/ --write",
+    "check": "biome check src/",
+    "fix": "biome check src/ --fix"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "tsx": "^4.19.3",
-    "zod": "^3.22.4"
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
+    "nitro": "latest",
+    "vite": "^7.1.7",
+    "zod": "^4.1.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.25.0",
-    "@types/node": "^22.7.5",
-    "eslint": "^9.25.0",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-import-x": "^4.10.6",
-    "globals": "^16.0.0",
+    "@biomejs/biome": "2.3.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
-    "prettier": "3.5.3",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.30.1"
+    "lint-staged": "^16.2.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "tsc --noEmit --skipLibCheck"
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "biome check --no-errors-on-unmatched --error-on-warnings --fix"
     ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+    "src/**/*.{ts,tsx}": [
+      "bash -c 'tsc --noEmit --skipLibCheck'"
     ]
   }
 }

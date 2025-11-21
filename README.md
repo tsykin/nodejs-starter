@@ -6,25 +6,26 @@ A modern Node.js starter template with TypeScript support.
 
 - 🚀 TypeScript 5
 - 📦 ESM support
-- ✨ ESLint 9 + Prettier
+- ✨ Biome (linter + formatter)
 - 🐋 Docker support
 - 🪝 Git hooks with Husky
 - 📝 Lint-staged for pre-commit checks
 - 🏃 Fast development with tsx
-- 🛠️ Production builds with tsc
-- 💾 Linting on save
+- 🛠️ Production builds with Vite + Nitro
+- 💾 Linting and formatting on save
 
 ## Scripts
 
 - `npm run dev` - Start development server with hot reload
 - `npm run build` - Build for production
 - `npm start` - Start production server
-- `npm run lint` - Fix lint issues
-- `npm run lint:fix` - Fix lint issues
+- `npm run index` - Run the main script once (no watch mode)
+- `npm run lint` - Lint code
 - `npm run format` - Format code
-- `npm run format:check` - Check code formatting
-- `npm run typecheck` - Check types
-- `npm run example` - Example of running a specific function instead of watching for changes
+- `npm run check` - Check code (lint + format)
+- `npm run fix` - Fix lint and format issues
+- `npm run typecheck` - Check types and run biome checks
+- `npm run prepare` - Set up Git hooks
 
 ## Getting Started
 
