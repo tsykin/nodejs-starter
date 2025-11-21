@@ -1,8 +1,19 @@
-# env
+node_modules
 .env
+.env*
 
-# dependencies
-/node_modules
+# Build output
+.nitro
+.output
+.tanstack
+generated
+dist
 
-# build output
-/dist
+# scraper browser data
+user-data
+
+# local files (logs, files, etc)
+temp
+TEMP.md
+TEMP*.md
+TEMP*.txt
