@@ -12,6 +12,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "start": "node .output/server/index.mjs",
+    "index": "tsx src/index.ts",
     "prepare": "husky || true",
     "typecheck": "tsc --noEmit && npx biome check src/ --error-on-warnings",
     "lint": "biome lint src/",
